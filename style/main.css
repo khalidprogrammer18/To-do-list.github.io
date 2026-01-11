@@ -1,0 +1,701 @@
+/* Regular styling */
+/* #region */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Noto Sans Arabic", sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+textarea {
+    resize: none;
+    line-height: 1.8;
+}
+*:focus {
+    outline: none;
+}
+ul {
+    list-style: none;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #222;
+}
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0;
+    width: 25px;
+}
+input[type="date"],
+input[type="time"] {
+    font-size: 12px;
+    color: #333;
+    position: relative;
+}
+.dark input[type="date"],
+.dark input[type="time"] {
+    font-size: 12px;
+    color: #333;
+    position: relative;
+}
+input[type="date"]::before,
+input[type="time"]::before {
+    position: absolute;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    font-size: 20px;
+}
+.dark input[type="date"]::before,
+.dark input[type="time"]::before {
+    position: absolute;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 20px;
+}
+input[type="time"]::before {
+    content: '\f017';
+}
+input[type="date"]::before {
+    content: '\f133';
+}
+.dark section, .dark input:not([type="submit"], [type="reset"]), .dark textarea, .dark li:not(li.active, li:hover) {
+    background-color: #333 !important;
+}
+.dark p, .dark label, .dark li, .dark input, .dark ::placeholder, .dark textarea, .dark h3, .dark i {
+    color: white !important;
+}
+/* #endregion */
+
+/* Note */
+/* #region */
+.note {
+    width: 300px;
+    height: 50px;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, -65px);
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 0px 3px #333;
+    z-index: 1;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+}
+.dark .note {
+    background-color: #333;
+    box-shadow: 0px 0px 3px white;
+}
+/* #endregion */
+
+/* Header */
+/* #region */
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: rtl;
+    padding: 20px 50px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    border-bottom: 5px solid black;
+}
+header .title {
+    font-weight: bold;
+    font-size: 30px;
+}
+header .switch input[type="checkbox"] {
+    appearance: none;
+    width: 75px;
+    height: 30px;
+    border-radius: 15px;
+    position: relative;
+    border: 2px solid transparent;
+    padding: 5px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    background-color: #87CEEB;
+    box-shadow: 0 0 5px #333;
+    cursor: pointer;
+}
+.dark header .switch input[type="checkbox"] {
+    box-shadow: 0 0 5px white;
+}
+header .switch input[type="checkbox"]:checked {
+    background-color: #0B3C5D;
+    position: relative;
+}
+header .switch input[type="checkbox"]::before {
+    position: absolute;
+    content: '☀️';
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    top: 0px;
+    left: 0;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .switch input[type="checkbox"]:checked::before {
+    content: '🌙';
+    transform: translateX(44px);
+    -webkit-transform: translateX(44px);
+    -moz-transform: translateX(44px);
+    -ms-transform: translateX(44px);
+    -o-transform: translateX(44px);
+    border-color: white;
+}
+header .switch input[type="checkbox"]::after,
+header .switch input[type="checkbox"]:checked::after {
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+header .switch input[type="checkbox"]::after {
+    position: absolute;
+    content: '☁️';
+    font-size: 30px;
+    right: 0;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+header .switch input[type="checkbox"]:checked::after {
+    content: '✨';
+    transform: translateY(-50%) translateX(-100%);
+    -webkit-transform: translateY(-50%) translateX(-100%);
+    -moz-transform: translateY(-50%) translateX(-100%);
+    -ms-transform: translateY(-50%) translateX(-100%);
+    -o-transform: translateY(-50%) translateX(-100%);
+    font-size: 25px;
+    text-shadow: 0 0 1.5px #fff, 0 0 1.5px #fff;
+}
+.dark header {
+    background-color: black;
+}
+.dark .title {
+    color: white;
+}
+/* #endregion */
+
+/* section form */
+/* #region */
+section {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    gap: 10px;
+    background-image: url(../imgs/wood4.jpg);
+    background-size: cover;
+}
+section .form {
+    padding: 15px;
+    text-align: center;
+    width: 350px;
+    border: 2px solid black;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    height: fit-content;
+    background-color: white;
+    height: calc(100vh - 104.5px);
+}
+.dark section .form {
+    background-color: #333;
+}
+section .form form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    direction: rtl;
+}
+section .form > p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #888;
+}
+section .form form p {
+    text-align: right;
+    color: rgb(255, 93, 39) !important;
+    font-size: 10px;
+    margin-top: 5px;
+}
+section .form form input[type="text"] {
+    width: 100%;
+}
+section .form form input[type="text"],
+section .form form textarea {
+    border: 1px solid rgb(88, 191, 255);
+    padding: 10px;
+    color: rgb(0, 151, 185);
+    caret-color: rgb(88, 191, 255);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+section .form form input[type="text"]:focus,
+section .form form textarea:focus {
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+}
+section .form form input[type="text"]::placeholder,
+section .form form textarea::placeholder {
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    color: rgb(0, 151, 185);
+}
+section .form form textarea {
+    height: 150px;
+    overflow: auto;
+}
+section .form form .combo {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+section .form form .thedate,
+section .form form .thetime {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+}
+section .form form .thedate label,
+section .form form .thetime label {
+    font-size: 20px;
+    color: #777;
+}
+section .form form .thedate input,
+section .form form .thetime input {
+    width: 135px;
+    height: 30px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border: 1px solid rgb(88, 191, 255);
+    padding: 5px 10px;
+    appearance: none;
+}
+section .form form .importance {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+section .form form .importance label {
+    font-size: 20px;
+    color: #777;
+    padding-left: 20px;
+}
+section .form form .importance input {
+    appearance: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border: 1px solid #ddd;
+    position: relative;
+    background-color: white;
+    cursor: pointer;
+}
+section .form form .importance input::before {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    height: 85%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transform: translate(1px, -50%);
+    -webkit-transform: translate(1px, -50%);
+    -moz-transform: translate(1px, -50%);
+    -ms-transform: translate(1px, -50%);
+    -o-transform: translate(1px, -50%);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    content: "\f00d";
+    background-color: rgb(255, 75, 15);
+    color: white;
+}
+section .form form .importance input:checked::before {
+    content: "\f00c";
+    background-color: rgb(13, 197, 0);
+    color: white;
+    font-size: 20px;
+    transform: translate(50px, -50%);
+}
+section .form form .importance input::before,
+section .form form .importance input:checked::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+section .form form .final input {
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border: none;
+    color: white;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    cursor: pointer;
+}
+section .form form .final input:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+section .form form .final input[type="reset"] {
+    background-color: rgb(255, 75, 15);
+}
+section .form form .final input[type="submit"] {
+    background-color: rgb(13, 197, 0);
+}
+/* #endregion */
+
+/* section mission */
+/* #region */
+section .missions {
+    flex: 1;
+    border: 2px solid black;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 5px;
+    background-color: white;
+}
+.dark section .missions {
+    background-color: #333;
+}
+section .missions .bar {
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+section .missions .bar p {
+    font-size: 20px;
+    color: #888;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+section .missions .bar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 10px;
+}
+section .missions .bar ul li {
+    background-color: white;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+section .missions .area {
+    width: 100%;
+    height: 438px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: auto;
+}
+section .missions .bar ul li.active {
+    border-color: rgb(88, 191, 255);
+    background-color: rgb(88, 191, 255);
+    color: white;
+}
+section .missions .bar ul li:hover {
+    border-color: rgb(88, 191, 255);
+    background-color: rgb(88, 191, 255);
+    color: white;
+    
+}
+section .missions .area .task {
+    padding: 5px;
+    border: 1px solid;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border: 1px solid #ddd;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    margin: 10px;
+    transition: 0.3s;
+    height: 62px;
+    overflow: hidden;
+    transition: height 0.3s ease;
+
+}
+section .missions .area .task .task-head {
+    direction: rtl;
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+.dark section .missions .area .task {
+    border-color: white;
+}
+section .missions .area .task p {
+    color: #777;
+    font-size: 12px;
+    align-self: flex-end;
+    padding-right: 10px;
+}
+section .missions .area .task h3 {
+    padding: 5px ;
+}
+section .missions .area .task .important {
+    color: rgb(255, 93, 39) !important;
+    align-self: center;
+    font-size: 25px;
+}
+section .missions .area .task i:last-of-type {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    cursor: pointer;
+}
+section .missions .area .task i:last-of-type:hover {
+    animation: down 0.75s linear reverse infinite;
+}
+@keyframes down {
+    0% {
+        transform: translateY(calc(-50% + 3px));
+    }
+    100% {
+        transform: translateY(calc(-50% - 3px));
+    }
+}
+section .missions .area .task .task-body {
+    font-size: 10px;
+    direction: rtl;
+    padding: 5px;
+    margin-top: 10px;
+    color: rgb(0, 151, 185);
+}
+section .missions .area .task .task-body span {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #777;
+}
+section .missions .area .task .task-head .del {
+    position: absolute;
+    left: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.dark section .missions .area .task .task-head .del:hover,
+section .missions .area .task .task-head .del:hover {
+    color: rgb(255, 93, 39) !important;
+}
+.dark section .missions .area .task .task-body span {
+    color: white;
+}
+.dark section .missions .area .task .task-body {
+    color: rgb(123, 204, 255);
+}
+section .missions .bar div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: rtl;
+    padding: 10px;
+}
+button {
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(255, 93, 39);
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    transform: scale(1.05);
+}
+.up {
+    animation-direction: normal !important;
+}
+/* #endregion */
+
+/* Media */
+/* #region */
+@media (min-width: 767px) {
+    section .missions .area {
+        height: 445px;
+    }
+}
+@media (max-width: 767px) {
+    header {
+        padding: 10px;
+    }
+    header .title {
+        font-size: 20px;
+    }
+    section {
+        flex-direction: column-reverse;
+    }
+    section .form {
+        width: 100%;
+    }
+    section .form form .thedate input,
+    section .form form .thetime input {
+        width: 150px;
+    }
+}
+@media (max-width: 450px) {
+    .combo {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .combo input {
+        margin: 5px auto;
+    }
+    section .form {
+        height: fit-content;
+    }
+    section .missions .area .task {
+        height: 55px;
+    }
+    section .missions .area .task h3 {
+        font-size: 13px;
+        padding-bottom: 10px;
+    }
+    section .missions .area .task p {
+        font-size: 8px;
+        display: block;
+    }
+    section .missions .area .task .important {
+        font-size: 20px;
+        /* align-self: flex-start; */
+    }
+
+}
+/* #endregion */

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة المهام</title>
+    <!-- icon -->
+    <link rel="icon" href="imgs/icon2.png">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Noto+Sans+Arabic:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!-- Styling Sheets -->
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/all.min.css">
+    <link rel="stylesheet" href="style/main.css">
+    <!-- Font Awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="note" id="note"></div>
+    <header>
+        <div class="title">قائمة المهام</div>
+        <div class="switch">
+            <input type="checkbox" id="mode">
+        </div>
+    </header>
+    <section>
+        <div class="missions">
+            <div class="bar">
+                <div>
+                    <p>المهام الحالية</p>
+                    <button id="clear">مسح الكل</button>
+                </div>
+            </div>
+            <div class="area" id="area"></div>
+        </div>
+        <div class="form">
+            <p>إضافة مهمة جديدة</p>
+            <form>
+                <div>
+                    <input type="text" id="heading" placeholder="عنوان المهمة (مطلوب)" maxlength="20">
+                    <p>*الحد الأقصى هو 20 حرف والأقل هو 4 حروف</p>
+                </div>
+                <textarea id="desc" placeholder="وصف المهمة"></textarea>
+                <div class="combo">
+                    <div class="thedate">
+                        <label for="date">التاريخ</label>
+                        <input type="date" id="date">
+                    </div>
+                    <div class="thetime">
+                        <label for="time">الوقت</label>
+                        <input type="time" id="time">
+                    </div>
+                </div>
+                <div class="importance">
+                    <label for="important">الأهمية</label>
+                    <input type="checkbox" id="important">
+                </div>
+                <div class="final">
+                    <input type="reset" value="مسح" id="reset">
+                    <input type="submit" value="إضافة" id="submit">
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>

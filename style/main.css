@@ -409,7 +409,7 @@ section .form form .importance input::before {
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
     content: "\f00d";
-    background-color: rgb(255, 75, 15);
+    background-color: #e74c3c;
     color: white;
 }
 section .form form .importance input:checked::before {
@@ -453,10 +453,16 @@ section .form form .final input:hover {
     -o-transform: scale(1.05);
 }
 section .form form .final input[type="reset"] {
-    background-color: rgb(255, 75, 15);
+    background-color: #e74c3c;
+}
+section .form form .final input[type="reset"]:hover {
+    background-color: #c0392b;
 }
 section .form form .final input[type="submit"] {
     background-color: rgb(13, 197, 0);
+}
+section .form form .final input[type="submit"]:hover {
+    background-color: rgb(11, 170, 0);
 }
 /* #endregion */
 
@@ -472,7 +478,7 @@ section .missions {
     -o-border-radius: 10px;
     padding: 5px;
     background-color: white;
-    height: calc(100vh - 79.5px);
+    height: calc(100vh - 109.5px);
 }
 .dark section .missions {
     background-color: #333;
@@ -657,7 +663,7 @@ button:hover {
 @media (max-width: 992px) {
     section {
         flex-direction: column-reverse;
-        height: calc(100vh - 79.5px);
+        height: calc(100vh - 81px);
     }
     section .form {
         width: 100%;

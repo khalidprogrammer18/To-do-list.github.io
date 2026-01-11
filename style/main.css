@@ -253,7 +253,7 @@ section {
     gap: 10px;
     background-image: url(../imgs/wood4.jpg);
     background-size: cover;
-    min-height: calc(100vh - 79.5px);
+    min-height: fit-content;
 }
 section .form {
     padding: 15px;
@@ -650,7 +650,7 @@ button:hover {
 /* #region */
 @media (min-width: 767px) {
     section .missions .area {
-        height: 445px;
+        height: calc(100% - 73px);
     }
 }
 @media (max-width: 992px) {
